@@ -124,6 +124,9 @@
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>E:/RuanJian/Unity/MyUnity2017/ZhiXingWenJian/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/Users/Administrator/Desktop/Sheep/GuardingFatSheepTown/DefendFatSheep/Assets/Plugins/LitJson.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -141,9 +144,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="LitJson">
- <HintPath>C:/Users/Administrator/Desktop/Sheep/DefendFatSheep/Assets/Plugins/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

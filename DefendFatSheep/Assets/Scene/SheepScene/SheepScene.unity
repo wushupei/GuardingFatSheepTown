@@ -1283,8 +1283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41e73b4de5084249acf4cfe07fb2891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  friendMainCity: {fileID: 1024775462}
-  enemyMainCity: {fileID: 931610097}
+  mainCitys:
+  - {fileID: 931610097}
+  - {fileID: 1024775462}
   friendPrababs: []
   enemyPrababs: []
 --- !u!4 &841817017

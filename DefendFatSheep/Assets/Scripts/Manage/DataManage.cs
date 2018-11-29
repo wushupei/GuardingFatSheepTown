@@ -8,10 +8,12 @@ public class DataManage : MonoBehaviour
     void Awake()
     {
         allDate = JsonMapper.ToObject(File.ReadAllText(Application.dataPath + "/StreamingAssets/AllCharacterData.json"));
+        if (allDate == null)
+            print("空");
     }
     public JsonData GetCharacterData(int id) //获取角色数据
     {
-        JsonData data=null;
+        JsonData data = null;
         for (int i = 0; i < allDate.Count; i++)
         {
             if ((int)allDate[i]["ID"] == id)

@@ -3,8 +3,7 @@ using UnityEngine;
 public class CharacterManage : MonoBehaviour
 {
     //存放双方主城
-    public Transform friendMainCity;
-    public Transform enemyMainCity;
+    public Transform[] mainCitys;
     //友军预制体和敌人预制体
     public List<GameObject> friendPrababs;
     public List<GameObject> enemyPrababs;

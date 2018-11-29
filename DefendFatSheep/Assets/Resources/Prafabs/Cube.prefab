@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 195372619655238854}
   - component: {fileID: 114272302819009892}
   - component: {fileID: 208271217055185094}
+  - component: {fileID: 65493382266309706}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Enemy
@@ -114,6 +115,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1982369529765774}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65493382266309706
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1235342736941302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &114272302819009892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +153,8 @@ MonoBehaviour:
   moveSpeed: 50
   rotateSpeed: 240
   attackRange: 30
-  targetTag: 0
+  viewRange: 0
+  mainCity: {fileID: 0}
   attackTarget: {fileID: 0}
 --- !u!195 &195372619655238854
 NavMeshAgent:

@@ -21,24 +21,36 @@ public abstract class Character : MonoBehaviour
     public float moveSpeed; //移动速度
     public float rotateSpeed; //转身速度
     public float attackRange; //攻击范围
+    public float viewRange; //视野范围
+
     //运行中获取
-    public string targetTag; //目标标签
+    public Transform mainCity; //敌方主城
     public Transform attackTarget; //攻击目标
 
-    DataManage dataManage;
-    
-    
-    protected void SetTargetTag() //根据自身标签判定敌人标签和自身颜色
+    //引用的类  
+    CharacterManage characterManage; //角色管理类
+    DataManage dataManage; //数据管理类
+
+    public virtual void OnEnable()
     {
-        if (tag == "Friend")
+        characterManage = FindObjectOfType<CharacterManage>();
+        SetTargetTag(); //判断标签
+        GetSelfData(); //获取数据
+    }
+    void SetTargetTag() //根据自身标签判定获取敌人主城和自身颜色
+    {
+        foreach (var item in characterManage.mainCitys) //遍历两座主城
         {
-            targetTag = "Enemy";
-            GetComponentInChildren<MeshRenderer>().material.color = Color.blue;
-        }
-        else if (tag == "Enemy")
-        {
-            targetTag = "Friend";
-            GetComponentInChildren<MeshRenderer>().material.color = Color.red;
+            if (item.tag == tag) //标签和自己一样的,设成同它一样的颜色
+            {
+                Color color = item.GetComponentInChildren<MeshRenderer>().material.color;
+                GetComponentInChildren<MeshRenderer>().material.color = color;
+            }
+            else //不一样则获取它
+            {
+                mainCity = item;
+                attackTarget = mainCity;
+            }
         }
     }
     protected void GetSelfData() //获取自身数据
@@ -61,8 +73,9 @@ public abstract class Character : MonoBehaviour
         moveSpeed = float.Parse(data["MoveSpeed"].ToString());//移动速度
         rotateSpeed = float.Parse(data["RotateSpeed"].ToString());//转身速度
         attackRange = float.Parse(data["AttackRange"].ToString()); //攻击范围
+        viewRange= float.Parse(data["ViewRange"].ToString()); //视野范围
     }
-    public abstract void GetAttackTarget(); //获取攻击目标
+    public abstract void GetAttackTarget(); //获取当前攻击目标
     public void Attack() //攻击
     {
         print("攻击");

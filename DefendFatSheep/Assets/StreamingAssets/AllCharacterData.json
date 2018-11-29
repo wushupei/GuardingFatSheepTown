@@ -14,10 +14,11 @@
  "SpellPenetration":0,		//法术穿透
  "MoveSpeed":0,				
  "RotateSpeed":0,			
- "AttackRange":0			//攻击范围
+ "AttackRange":0,			//攻击范围
+ "ViewRange":0              //视野范围
  },
  {
- "ID":2001, 					
+ "ID":2001,					
  "CharacterName":"方块", 	
  "Hp":3000,					
  "Aggressivity":100, 		//攻击力
@@ -31,7 +32,8 @@
  "SpellPenetration":0,		//法术穿透
  "MoveSpeed":30,				
  "RotateSpeed":180,			
- "AttackRange":8			//攻击范围
+ "AttackRange":15,			//攻击范围
+ "ViewRange":50             //视野范围
  },
   {
  "ID":2002, 					
@@ -48,7 +50,8 @@
  "SpellPenetration":0,		//法术穿透
  "MoveSpeed":40,				
  "RotateSpeed":240,			
- "AttackRange":10			//攻击范围
+ "AttackRange":10,			//攻击范围
+ "ViewRange":50             //视野范围
  },
   {
  "ID":2003, 					
@@ -65,7 +68,8 @@
  "SpellPenetration":0,		//法术穿透
  "MoveSpeed":35,				
  "RotateSpeed":240,			
- "AttackRange":30			//攻击范围
+ "AttackRange":30,			//攻击范围
+ "ViewRange":50             //视野范围
  },
  {
  "ID":2004, 					
@@ -82,6 +86,7 @@
  "SpellPenetration":20,		//法术穿透
  "MoveSpeed":30,				
  "RotateSpeed":200,			
- "AttackRange":25			//攻击范围
+ "AttackRange":25,			//攻击范围
+ "ViewRange":50             //视野范围
  }
 ]

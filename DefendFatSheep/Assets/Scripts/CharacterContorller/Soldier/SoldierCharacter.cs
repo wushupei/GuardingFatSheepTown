@@ -3,28 +3,33 @@ using UnityEngine.AI;
 public class SoldierCharacter : Character
 {
     private NavMeshAgent agent; //寻路组件
-    public void OnEnable()
+    public override void OnEnable()
     {
-        SetTargetTag();
-        GetSelfData();
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = moveSpeed; //将移动速度设为寻路速度  
+        base.OnEnable();
+        //获取寻路组件设置寻路速度和旋转速度  
+        agent = GetComponent<NavMeshAgent>();        
+        agent.speed = moveSpeed; 
         agent.angularSpeed = rotateSpeed;
     }
-    public override void GetAttackTarget() //重写获取目标敌人的方法
+
+    public override void GetAttackTarget() //重写获取攻击目标
     {
-        //根据标签获取所有敌人,找到离自己最近的一个作为攻击目标
-        GameObject[] allTarget = GameObject.FindGameObjectsWithTag(targetTag);
-        attackTarget = allTarget[0].transform;
-        foreach (var item in allTarget)
+        if (attackTarget == mainCity) //如果攻击目标位主城
         {
-            if (Vector3.Distance(transform.position, item.transform.position) < Vector3.Distance(transform.position, attackTarget.position))
-                attackTarget = item.transform;
+            //获取视野范围内所有物体
+            Collider[] objects = Physics.OverlapSphere(transform.position, viewRange);
+            //如果这些物体中谁有敌方标签,则将它视为攻击目标
+            foreach (var obj in objects)
+            {
+                if (obj.CompareTag(mainCity.tag))
+                {
+                    attackTarget = obj.transform;
+                    break;
+                }
+            }
         }
-    }
-    public void MoveToGetAttackTarget() //向目标敌人寻路
-    {
-        agent.SetDestination(attackTarget.position);
+        else if (attackTarget == null) //如果攻击目标被消灭,重新获取主城为攻击目标
+            attackTarget = mainCity;
     }
     public void LookAtAttackTarget() //在攻击时面向目标
     {
@@ -34,21 +39,21 @@ public class SoldierCharacter : Character
     }
     void Update()
     {
-        //没有目标敌人获取一个
-        if (!attackTarget)
-            GetAttackTarget();
-        //如果目标敌人没有进入攻击范围,继续前行
-        else if (Vector3.Distance(transform.position, new Vector3(attackTarget.position.x, transform.position.y, attackTarget.position.z)) > attackRange)
+        GetAttackTarget(); //获取攻击目标
+
+        //如果与攻击目标距离大于攻击范围,则走向它
+        Vector3 v = attackTarget.position;
+        if (Vector3.Distance(transform.position, new Vector3(v.x, transform.position.y, v.z)) > attackRange)
         {
             agent.areaMask = 1;
-            MoveToGetAttackTarget();
+            agent.SetDestination(attackTarget.position);
         }
-        //到达攻击范围则停下并攻击
+        //到达攻击范围则停下面向它攻击
         else
         {
             agent.areaMask = 0;
-            Attack();
             LookAtAttackTarget();
+            Attack();
         }
     }
 }

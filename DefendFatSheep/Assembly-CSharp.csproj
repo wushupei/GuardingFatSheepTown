@@ -90,6 +90,9 @@
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>E:/RuanJian/Unity/MyUnity2017/ZhiXingWenJian/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
+ <Reference Include="LitJson">
+ <HintPath>C:/Users/Administrator/Desktop/Sheep/GuardingFatSheepTown/DefendFatSheep/Assets/Plugins/LitJson.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -98,9 +101,6 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/Administrator/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
- </Reference>
- <Reference Include="LitJson">
- <HintPath>C:/Users/Administrator/Desktop/Sheep/DefendFatSheep/Assets/Plugins/LitJson.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
