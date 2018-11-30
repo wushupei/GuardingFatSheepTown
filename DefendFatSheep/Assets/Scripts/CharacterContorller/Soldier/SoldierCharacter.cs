@@ -2,14 +2,16 @@
 using UnityEngine.AI;
 public class SoldierCharacter : Character
 {
-    private NavMeshAgent agent; //寻路组件
+    NavMeshAgent agent; //寻路组件
+    Animator anima;
     public override void OnEnable()
     {
         base.OnEnable();
         //获取寻路组件设置寻路速度和旋转速度  
-        agent = GetComponent<NavMeshAgent>();        
-        agent.speed = moveSpeed; 
+        agent = GetComponent<NavMeshAgent>();
+        agent.speed = moveSpeed;
         agent.angularSpeed = rotateSpeed;
+        anima = GetComponentInChildren<Animator>();
     }
 
     public override void GetAttackTarget() //重写获取攻击目标
@@ -39,6 +41,7 @@ public class SoldierCharacter : Character
     }
     void Update()
     {
+        timer -= Time.deltaTime; //攻击冷却在任何情况都在计算
         GetAttackTarget(); //获取攻击目标
 
         //如果与攻击目标距离大于攻击范围,则走向它

@@ -26,6 +26,7 @@ public abstract class Character : MonoBehaviour
     //运行中获取
     public Transform mainCity; //敌方主城
     public Transform attackTarget; //攻击目标
+    public float timer = 0; //攻击间隔(受攻击速度影响)
 
     //引用的类  
     CharacterManage characterManage; //角色管理类
@@ -73,11 +74,29 @@ public abstract class Character : MonoBehaviour
         moveSpeed = float.Parse(data["MoveSpeed"].ToString());//移动速度
         rotateSpeed = float.Parse(data["RotateSpeed"].ToString());//转身速度
         attackRange = float.Parse(data["AttackRange"].ToString()); //攻击范围
-        viewRange= float.Parse(data["ViewRange"].ToString()); //视野范围
+        viewRange = float.Parse(data["ViewRange"].ToString()); //视野范围
     }
-    public abstract void GetAttackTarget(); //获取当前攻击目标
+    public abstract void GetAttackTarget(); //获取当前攻击目标   
     public void Attack() //攻击
     {
-        print("攻击");
+        if (AttackDirection())
+        {
+            if (timer <= 0)
+            {
+                print("攻击");
+                timer = 1 / attackSpeed;
+            }
+        }
+    }
+    bool AttackDirection() //攻击目标方位判定
+    {
+        //往前方发射射线,如果打到攻击目标,则可以攻击
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, transform.forward, attackRange);
+        foreach (var item in hits)
+        {
+            if (item.collider == attackTarget.GetComponent<Collider>())
+                return true;
+        }
+        return false;
     }
 }

@@ -14,6 +14,7 @@ public class Test : MonoBehaviour
     }
     private void Update()
     {
-        agent.SetDestination(target.position); //向被寻路物体的坐标进发
+        //agent.SetDestination(target.position); //向被寻路物体的坐标进发
+
     }
 }

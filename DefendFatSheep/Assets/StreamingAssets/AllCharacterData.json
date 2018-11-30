@@ -18,14 +18,14 @@
  "ViewRange":0              //视野范围
  },
  {
- "ID":2001,					
- "CharacterName":"方块", 	
+ "ID":2001,					//*****坦克*****
+ "CharacterName":"曙光", 	
  "Hp":3000,					
  "Aggressivity":100, 		//攻击力
  "SpellPower":0,			//法强
  "PhysicalResistance":200,	//物理抗性
  "MagicResistance":150,		//魔法抗性
- "AttackSpeed":1,			
+ "AttackSpeed":0.8,			
  "CriticalChance":0.1,		//暴击率
  "CriticalHitMultiple":1.2,	//暴击倍数
  "PhysicalPenetration":10, 	//物理穿透
@@ -36,8 +36,8 @@
  "ViewRange":50             //视野范围
  },
   {
- "ID":2002, 					
- "CharacterName":"球", 	
+ "ID":2002, 				//*****战士*****	
+ "CharacterName":"剑圣", 	
  "Hp":800,					
  "Aggressivity":300, 		//攻击力
  "SpellPower":0,			//法强
@@ -54,14 +54,14 @@
  "ViewRange":50             //视野范围
  },
   {
- "ID":2003, 					
- "CharacterName":"圆柱", 	
- "Hp":180,					
+ "ID":2003, 				//*****ADC*****	
+ "CharacterName":"女警", 	
+ "Hp":300,					
  "Aggressivity":280, 		//攻击力
  "SpellPower":0,			//法强
  "PhysicalResistance":30,	//物理抗性
  "MagicResistance":20,		//魔法抗性
- "AttackSpeed":1.2,			
+ "AttackSpeed":1.5,			
  "CriticalChance":0.5,		//暴击率
  "CriticalHitMultiple":1.8,	//暴击倍数
  "PhysicalPenetration":30, 	//物理穿透
@@ -72,8 +72,8 @@
  "ViewRange":50             //视野范围
  },
  {
- "ID":2004, 					
- "CharacterName":"胶囊", 	
+ "ID":2004, 				//*****法师*****	
+ "CharacterName":"寒冰", 	
  "Hp":500,					
  "Aggressivity":0, 		    //攻击力
  "SpellPower":150,		    //法强
