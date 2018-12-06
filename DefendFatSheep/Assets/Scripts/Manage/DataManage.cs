@@ -13,15 +13,11 @@ public class DataManage : MonoBehaviour
     }
     public JsonData GetCharacterData(int id) //获取角色数据
     {
-        JsonData data = null;
         for (int i = 0; i < allDate.Count; i++)
         {
-            if ((int)allDate[i]["ID"] == id)
-            {
-                data = allDate[i];
-                break;
-            }
+            if ((int)allDate[i]["ID"] == id) //ID对上就将数据给它
+                return allDate[i];
         }
-        return data;
+        return null;
     }
 }

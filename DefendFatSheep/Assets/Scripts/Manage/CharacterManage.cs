@@ -7,10 +7,9 @@ public class CharacterManage : MonoBehaviour
     //友军预制体和敌人预制体
     public List<GameObject> friendPrababs;
     public List<GameObject> enemyPrababs;
-
     void Awake()
     {
-        SoldierCharacter[] friendPrababsArray= Resources.LoadAll<SoldierCharacter>("Prafabs");    
+        SoldierCharacter[] friendPrababsArray= Resources.LoadAll<SoldierCharacter>("Prafabs");            
         foreach (var item in friendPrababsArray)
         {
             friendPrababs.Add(item.gameObject);

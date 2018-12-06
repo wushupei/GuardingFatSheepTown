@@ -2,9 +2,9 @@
  { 
  "ID":1001, 					
  "CharacterName":"防御塔", 	
- "Hp":10000,					
- "Aggressivity":200, 		//攻击力
- "SpellPower":0,			//法强
+ "HpValue":10000,					
+ "Ad":200, 		//攻击力
+ "Ap":0,			//法强
  "PhysicalResistance":150,	//物理抗性
  "MagicResistance":120,		//魔法抗性
  "AttackSpeed":0.8,			
@@ -14,33 +14,33 @@
  "SpellPenetration":0,		//法术穿透
  "MoveSpeed":0,				
  "RotateSpeed":0,			
- "AttackRange":0,			//攻击范围
+ "AttackRange":25,			//攻击范围
  "ViewRange":0              //视野范围
  },
  {
  "ID":2001,					//*****坦克*****
  "CharacterName":"曙光", 	
- "Hp":3000,					
- "Aggressivity":100, 		//攻击力
- "SpellPower":0,			//法强
+ "HpValue":3000,					
+ "Ad":100, 		//攻击力
+ "Ap":0,			//法强
  "PhysicalResistance":200,	//物理抗性
  "MagicResistance":150,		//魔法抗性
- "AttackSpeed":0.8,			
+ "AttackSpeed":1.0,			
  "CriticalChance":0.1,		//暴击率
  "CriticalHitMultiple":1.2,	//暴击倍数
  "PhysicalPenetration":10, 	//物理穿透
  "SpellPenetration":0,		//法术穿透
- "MoveSpeed":30,				
+ "MoveSpeed":10,				
  "RotateSpeed":180,			
- "AttackRange":15,			//攻击范围
+ "AttackRange":2,			//攻击范围
  "ViewRange":50             //视野范围
  },
   {
  "ID":2002, 				//*****战士*****	
  "CharacterName":"剑圣", 	
- "Hp":800,					
- "Aggressivity":300, 		//攻击力
- "SpellPower":0,			//法强
+ "HpValue":800,					
+ "Ad":300, 		//攻击力
+ "Ap":0,			//法强
  "PhysicalResistance":50,	//物理抗性
  "MagicResistance":100,		//魔法抗性
  "AttackSpeed":1.5,			
@@ -56,9 +56,9 @@
   {
  "ID":2003, 				//*****ADC*****	
  "CharacterName":"女警", 	
- "Hp":300,					
- "Aggressivity":280, 		//攻击力
- "SpellPower":0,			//法强
+ "HpValue":300,					
+ "Ad":280, 		//攻击力
+ "Ap":0,			//法强
  "PhysicalResistance":30,	//物理抗性
  "MagicResistance":20,		//魔法抗性
  "AttackSpeed":1.5,			
@@ -74,9 +74,9 @@
  {
  "ID":2004, 				//*****法师*****	
  "CharacterName":"寒冰", 	
- "Hp":500,					
- "Aggressivity":0, 		    //攻击力
- "SpellPower":150,		    //法强
+ "HpValue":500,					
+ "Ad":0, 		    //攻击力
+ "Ap":150,		    //法强
  "PhysicalResistance":40,	//物理抗性
  "MagicResistance":60,		//魔法抗性
  "AttackSpeed":1.2,			
