@@ -350,11 +350,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &92597536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,11 +491,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &97760222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -753,11 +753,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &129402048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,11 +1347,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &378750798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1782,11 +1782,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &445081289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2007,11 +2007,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &505593356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2532,11 +2532,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &608402661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,11 +3039,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &685720863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3475,11 +3475,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &825326930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3950,11 +3950,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &931610102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,11 +4091,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &1009822789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4232,11 +4232,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &1024775467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,11 +4525,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &1092606264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4898,11 +4898,11 @@ NavMeshObstacle:
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}
-  m_MoveThreshold: 0.1
+  m_MoveThreshold: 0.5
   m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
+  m_TimeToStationary: 0.2
 --- !u!114 &1414366807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5899,6 +5899,7 @@ GameObject:
   - component: {fileID: 1844023221}
   - component: {fileID: 1844023220}
   - component: {fileID: 1844023224}
+  - component: {fileID: 1844023225}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5962,13 +5963,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1844023219}
-  m_LocalRotation: {x: 0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 146.1, z: -118}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: 0, y: 80, z: -100}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!114 &1844023224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5980,6 +5981,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60e05947604a234baa2c8c5f59fe621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1844023225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1844023219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9962c606af9e90743aa43c00a00d0737, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 80
 --- !u!1 &1860785248
 GameObject:
   m_ObjectHideFlags: 0

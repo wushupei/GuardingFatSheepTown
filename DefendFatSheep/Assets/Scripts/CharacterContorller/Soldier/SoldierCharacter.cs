@@ -46,15 +46,13 @@ public class SoldierCharacter : Character
         if (attackTarget == mainCity) //如果攻击目标位主城
         {
             //获取视野范围内所有物体
-            Collider[] objects = Physics.OverlapSphere(transform.position, viewRange);
+            Collider[] objs = Physics.OverlapSphere(transform.position, viewRange);
             //如果这些物体中的敌方标签,视为攻击目标
-            foreach (var obj in objects)
+            float dis = Vector3.Distance(transform.position, mainCity.position);
+            for (int i = 0; i < objs.Length; i++)
             {
-                if (obj.tag == mainCity.tag)
-                {
-                    attackTarget = obj.transform;
-                    break;
-                }
+                if (objs[i].tag == mainCity.tag && Vector3.Distance(transform.position, objs[i].transform.position) < dis)
+                    attackTarget = objs[i].transform;
             }
         }
         else if (attackTarget == null || !attackTarget.GetComponent<CapsuleCollider>()) //如果攻击目标被死亡,重新认定主城为攻击目标
@@ -66,7 +64,7 @@ public class SoldierCharacter : Character
         Quaternion dir = Quaternion.LookRotation(attackTarget.position - transform.position);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, dir, rotateSpeed * Time.deltaTime);
         //往前方发射射线,如果打到攻击目标,则可以攻击
-        RaycastHit[] hits = Physics.RaycastAll(transform.position+Vector3.up*5, transform.forward, attackRange + radius);
+        RaycastHit[] hits = Physics.RaycastAll(transform.position + Vector3.up * 5, transform.forward, attackRange + radius);
         foreach (var item in hits)
         {
             if (item.collider == attackTarget.GetComponent<Collider>())
