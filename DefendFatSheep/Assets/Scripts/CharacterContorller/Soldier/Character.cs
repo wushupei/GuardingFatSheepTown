@@ -45,16 +45,16 @@ public abstract class Character : MonoBehaviour
         data = dataManage.GetCharacterData(id);
 
         CharacterName = data["CharacterName"].ToString();
-        hp = float.Parse(data["HpValue"].ToString()); //生命值
+        hp = float.Parse(data["Hp"].ToString()); //生命值
         ad = float.Parse(data["Ad"].ToString());  //攻击力
         ap = float.Parse(data["Ap"].ToString()); //法强
-        adr = float.Parse(data["PhysicalResistance"].ToString());//物理抗性
-        apr = float.Parse(data["MagicResistance"].ToString()); //魔法抗性
+        adr = float.Parse(data["Adr"].ToString());//物理抗性
+        apr = float.Parse(data["Apr"].ToString()); //魔法抗性
         attackSpeed = float.Parse(data["AttackSpeed"].ToString()); //攻速
-        cc = float.Parse(data["CriticalChance"].ToString()); //暴击率
-        cm = float.Parse(data["CriticalHitMultiple"].ToString()); //暴击倍数
-        adp = float.Parse(data["PhysicalPenetration"].ToString()); //物理穿透
-        app = float.Parse(data["SpellPenetration"].ToString()); //法术穿透   
+        cc = float.Parse(data["Cc"].ToString()); //暴击率
+        cm = float.Parse(data["Cm"].ToString()); //暴击倍数
+        adp = float.Parse(data["Adp"].ToString()); //物理穿透
+        app = float.Parse(data["App"].ToString()); //法术穿透   
         moveSpeed = float.Parse(data["MoveSpeed"].ToString());//移动速度
         rotateSpeed = float.Parse(data["RotateSpeed"].ToString());//转身速度
         attackRange = float.Parse(data["AttackRange"].ToString()); //攻击范围

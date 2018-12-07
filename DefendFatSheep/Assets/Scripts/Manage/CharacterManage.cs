@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+/// <summary>
+/// 角色管理类,挂CharacterManage上
+/// </summary>
 public class CharacterManage : MonoBehaviour
 {
     //存放双方主城
@@ -9,7 +12,7 @@ public class CharacterManage : MonoBehaviour
     public List<GameObject> enemyPrababs;
     void Awake()
     {
-        SoldierCharacter[] friendPrababsArray= Resources.LoadAll<SoldierCharacter>("Prafabs");            
+        SoldierCharacter[] friendPrababsArray= Resources.LoadAll<SoldierCharacter>("Prafabs/Soldiers");            
         foreach (var item in friendPrababsArray)
         {
             friendPrababs.Add(item.gameObject);

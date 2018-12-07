@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+/// <summary>
+/// 玩家控制类,挂Player上
+/// </summary>
 public class PlayerContorller : MonoBehaviour
 {
     PlayerCharacter pc;

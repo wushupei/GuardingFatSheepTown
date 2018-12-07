@@ -2,91 +2,96 @@
  { 
  "ID":1001, 					
  "CharacterName":"防御塔", 	
- "HpValue":10000,					
+ "Hp":10000,					
  "Ad":200, 		//攻击力
  "Ap":0,			//法强
- "PhysicalResistance":150,	//物理抗性
- "MagicResistance":120,		//魔法抗性
+ "Adr":150,	//物理抗性
+ "Apr":120,		//魔法抗性
  "AttackSpeed":0.8,			
- "CriticalChance":0,		//暴击率
- "CriticalHitMultiple":1,	//暴击倍数
- "PhysicalPenetration":0,	//物理穿透
- "SpellPenetration":0,		//法术穿透
+ "Cc":0,		//暴击率
+ "Cm":1,	//暴击倍数
+ "Adp":0,	//物理穿透
+ "App":0,		//法术穿透
  "MoveSpeed":0,				
  "RotateSpeed":0,			
  "AttackRange":25,			//攻击范围
- "ViewRange":0              //视野范围
+ "ViewRange":0,             //视野范围
+ "CardName":"防御塔"              //卡牌名称
  },
  {
  "ID":2001,					//*****坦克*****
  "CharacterName":"曙光", 	
- "HpValue":3000,					
+ "Hp":3000,					
  "Ad":100, 		//攻击力
  "Ap":0,			//法强
- "PhysicalResistance":200,	//物理抗性
- "MagicResistance":150,		//魔法抗性
+ "Adr":200,	//物理抗性
+ "Apr":150,		//魔法抗性
  "AttackSpeed":1.0,			
- "CriticalChance":0.1,		//暴击率
- "CriticalHitMultiple":1.2,	//暴击倍数
- "PhysicalPenetration":10, 	//物理穿透
- "SpellPenetration":0,		//法术穿透
+ "Cc":0.1,		//暴击率
+ "Cm":1.2,	//暴击倍数
+ "Adp":10, 	//物理穿透
+ "App":0,		//法术穿透
  "MoveSpeed":10,				
  "RotateSpeed":180,			
  "AttackRange":2,			//攻击范围
- "ViewRange":50             //视野范围
+ "ViewRange":50,            //视野范围
+ "CardName":"ShuGuang"      //卡牌名称
  },
   {
  "ID":2002, 				//*****战士*****	
  "CharacterName":"剑圣", 	
- "HpValue":800,					
+ "Hp":800,					
  "Ad":300, 		//攻击力
  "Ap":0,			//法强
- "PhysicalResistance":50,	//物理抗性
- "MagicResistance":100,		//魔法抗性
+ "Adr":50,	//物理抗性
+ "Apr":100,		//魔法抗性
  "AttackSpeed":1.5,			
- "CriticalChance":0.3,		//暴击率
- "CriticalHitMultiple":2,	//暴击倍数
- "PhysicalPenetration":40, 	//物理穿透
- "SpellPenetration":0,		//法术穿透
+ "Cc":0.3,		//暴击率
+ "Cm":2,	//暴击倍数
+ "Adp":40, 	//物理穿透
+ "App":0,		//法术穿透
  "MoveSpeed":40,				
  "RotateSpeed":240,			
  "AttackRange":10,			//攻击范围
- "ViewRange":50             //视野范围
+ "ViewRange":50,            //视野范围
+ "CardName":"JianSheng"     //卡牌名称
  },
   {
  "ID":2003, 				//*****ADC*****	
  "CharacterName":"女警", 	
- "HpValue":300,					
+ "Hp":300,					
  "Ad":280, 		//攻击力
  "Ap":0,			//法强
- "PhysicalResistance":30,	//物理抗性
- "MagicResistance":20,		//魔法抗性
+ "Adr":30,	//物理抗性
+ "Apr":20,		//魔法抗性
  "AttackSpeed":1.5,			
- "CriticalChance":0.5,		//暴击率
- "CriticalHitMultiple":1.8,	//暴击倍数
- "PhysicalPenetration":30, 	//物理穿透
- "SpellPenetration":0,		//法术穿透
+ "Cc":0.5,		//暴击率
+ "Cm":1.8,	//暴击倍数
+ "Adp":30, 	//物理穿透
+ "App":0,		//法术穿透
  "MoveSpeed":35,				
  "RotateSpeed":240,			
  "AttackRange":30,			//攻击范围
- "ViewRange":50             //视野范围
+ "ViewRange":50,            //视野范围
+ "CardName":"NvJing"        //卡牌名称
  },
  {
  "ID":2004, 				//*****法师*****	
  "CharacterName":"寒冰", 	
- "HpValue":500,					
+ "Hp":500,					
  "Ad":0, 		    //攻击力
  "Ap":150,		    //法强
- "PhysicalResistance":40,	//物理抗性
- "MagicResistance":60,		//魔法抗性
+ "Adr":40,	//物理抗性
+ "Apr":60,		//魔法抗性
  "AttackSpeed":1.2,			
- "CriticalChance":0, 		//暴击率
- "CriticalHitMultiple":0,	//暴击倍数
- "PhysicalPenetration":0, 	//物理穿透
- "SpellPenetration":20,		//法术穿透
+ "Cc":0, 		//暴击率
+ "Cm":0,	//暴击倍数
+ "Adp":0, 	//物理穿透
+ "App":20,		//法术穿透
  "MoveSpeed":30,				
  "RotateSpeed":200,			
  "AttackRange":25,			//攻击范围
- "ViewRange":50             //视野范围
+ "ViewRange":50,            //视野范围
+ "CardName":"HanBing"       //卡牌名称
  }
 ]

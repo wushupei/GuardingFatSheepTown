@@ -2,6 +2,9 @@
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.AI;
+/// <summary>
+/// 士兵角色类,挂士兵身上
+/// </summary>
 public class SoldierCharacter : Character
 {
     NavMeshAgent agent; //寻路组件
