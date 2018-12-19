@@ -1,33 +1,18 @@
-﻿using System.Collections;
-
-using System.Collections.
-Generic;
-using UnityEngine;
-
-
+﻿using UnityEngine;
 public class CityCharacter : Character
 {
     Transform muzzle; //枪口
-    public GameObject bullet;
-    public void Start()
+    GameObject bullet; //子弹
+    void Start()
     {
         GetSelfData(); //获取数据
-        SetTargetTag();
+        GetMainCity();
         muzzle = transform.Find("Muzzle");
         bullet = Resources.Load("Prafabs/Bullet") as GameObject;
-        hpSlider = transform.Find("BackGround");
+        hpSlider = transform.Find("HpSlider");
         maxHp = hp; //获取最大血量
     }
-    void SetTargetTag() //根据自身标签判定获取敌人主城和自身颜色
-    {
-        characterManage = FindObjectOfType<CharacterManage>();
-        foreach (var item in characterManage.mainCitys) //遍历两座主城
-        {
-            if (item.tag != tag) //标签和自己一样的,获取它
-                mainCity = item;
-        }
-    }
-    public override void GetAttackTarget()
+    public override void GetAttackTarget() //获取攻击目标
     {
         if (attackTarget) //如果攻击目标不为空
         {
@@ -42,7 +27,7 @@ public class CityCharacter : Character
             //如果这些物体中的敌方标签,视为攻击目标
             foreach (var obj in objects)
             {
-                if (obj.tag == mainCity.tag)
+                if (obj.tag == enemyTag)
                 {
                     attackTarget = obj.transform;
                     break;
@@ -57,7 +42,7 @@ public class CityCharacter : Character
             if (timer <= 0)
             {
                 Bullet b = Instantiate(bullet, muzzle.position, Quaternion.identity).GetComponent<Bullet>();
-                b.GetData(attackTarget, ad, adp, cc, cm, ap, app);
+                b.GetData(attackTarget, ad, adp, cc, cm, ap, app); //防御塔没有暴击率
                 timer = 1 / attackSpeed; //进入冷却时间
             }
         }
@@ -69,8 +54,11 @@ public class CityCharacter : Character
     }
     void Update()
     {
-        GetAttackTarget();
-        Attack();
+        if (!characterManage.gameOver) //如果游戏为结束则攻击
+        {
+            GetAttackTarget();
+            Attack();
+        }
         if (isDie)
             Death();
     }

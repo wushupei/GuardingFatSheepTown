@@ -38,10 +38,6 @@ public class Bullet : MonoBehaviour
     void OnDisable()
     {
         if (target)
-        {   //如果没有出暴击,暴击倍数为1
-            if (Random.Range(0, 100) > cc * 100)
-                cm = 1;
             target.GetComponent<Character>().Damage(ad, adp, cm, ap, app);
-        }
     }
 }

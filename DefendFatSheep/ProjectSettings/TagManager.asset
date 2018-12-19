@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Enemy
   - Friend
+  - Muzzle
   layers:
   - Default
   - TransparentFX

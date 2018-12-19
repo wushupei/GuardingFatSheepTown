@@ -24,15 +24,14 @@ public abstract class Character : MonoBehaviour
     public float viewRange; //视野范围
 
     //运行中获取
+    public Transform EnemyMainCity; //敌方主城
+    public string enemyTag; //敌方标签
     public AudioSource audioSource; //声音播放组件
-    public string audioPath; //声音路径
-    public Transform mainCity; //敌方主城
     public Transform attackTarget; //攻击目标
     public float timer = 0; //攻击间隔(受攻击速度影响)
     public float maxHp; //最大血量
     public Transform hpSlider; //血条
     public bool isDie = false;
-    
 
     //引用的类  
     public CharacterManage characterManage; //角色管理类
@@ -60,6 +59,24 @@ public abstract class Character : MonoBehaviour
         attackRange = float.Parse(data["AttackRange"].ToString()); //攻击范围
         viewRange = float.Parse(data["ViewRange"].ToString()); //视野范围
     }
+    //根据自身标签判定获取敌人主城
+    public void GetMainCity()
+    {
+        characterManage = FindObjectOfType<CharacterManage>();
+        foreach (var item in characterManage.mainCitys) //遍历两座主城
+        {
+            if (item.tag != tag) //和自己不一样的是敌方主城
+            {
+                EnemyMainCity = item;
+                enemyTag = EnemyMainCity.tag;
+            }
+            else
+            {
+                //Color color = item.GetComponentInChildren<MeshRenderer>().material.color;
+                //GetComponentInChildren<Renderer>().material.color = color;
+            }
+        }
+    }
     //受伤方法
     public void Damage(float _ad, float _adp, float _cm, float _ap, float _app)
     {
@@ -79,7 +96,8 @@ public abstract class Character : MonoBehaviour
         }
         ShowHpSlider();
     }
-    public void ShowHpSlider() //显示血条
+    //显示血条
+    public void ShowHpSlider()
     {
         //如果受伤，显示血条
         if (hp < maxHp && hp > 0)

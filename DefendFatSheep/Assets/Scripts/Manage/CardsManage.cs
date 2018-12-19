@@ -27,7 +27,8 @@ public class CardsManage : MonoBehaviour
     {       
         while (cardSlot.transform.childCount < slotLength) //如果卡牌槽未满
         {
-            int index = Random.Range(0, cards.Length); //随机一张卡牌
+            //随机一张卡牌
+            int index = Random.Range(0, cards.Length); 
             //在卡牌槽的子物体下生产卡牌,添加卡牌信息脚本
             Instantiate(cards[index], cardSlot.transform).AddComponent<CardData>(); 
         }

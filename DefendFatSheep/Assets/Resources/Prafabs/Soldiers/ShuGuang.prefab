@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 82089564576811372}
   m_Layer: 0
   m_Name: ShuGuang
-  m_TagString: Enemy
+  m_TagString: Friend
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -734,7 +734,7 @@ GameObject:
   - component: {fileID: 212737089993871152}
   - component: {fileID: 114490209441498804}
   m_Layer: 0
-  m_Name: BackGround
+  m_Name: HpSlider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2260,7 +2260,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252324045777276}
   m_LocalRotation: {x: -0.02809704, y: 0.42540938, z: 0.013215226, w: 0.90446824}
-  m_LocalPosition: {x: 18.562836, y: 0.000000029802322, z: 20.531347}
+  m_LocalPosition: {x: 24.62, y: 0, z: 13.21}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 4936472106209430}
@@ -2697,17 +2697,17 @@ MonoBehaviour:
   rotateSpeed: 180
   attackRange: 15
   viewRange: 50
+  EnemyMainCity: {fileID: 0}
+  enemyTag: 
   audioSource: {fileID: 0}
-  audioPath: AudioClip/ShuGuang/Attack
-  mainCity: {fileID: 0}
   attackTarget: {fileID: 0}
   timer: 0.7594552
   maxHp: 0
   hpSlider: {fileID: 0}
   isDie: 0
   characterManage: {fileID: 0}
-  animaLength: 0.96666664
-  animaSpeed: 0
+  attackSound: {fileID: 0}
+  deathSound: {fileID: 0}
 --- !u!136 &136629546396749078
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -2735,7 +2735,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 0b5a75fee8156e347b869f29a905bd5e, type: 3}
+  - {fileID: 2100000, guid: 6a4c6b5e64c25b1428462df0cb7138e5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2857,7 +2857,7 @@ NavMeshObstacle:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252324045777276}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 0
   m_Extents: {x: 0.5, y: 1, z: 0.5}

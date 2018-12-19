@@ -7,25 +7,42 @@ public class CharacterManage : MonoBehaviour
 {
     //存放双方主城
     public Transform[] mainCitys;
-    //友军预制体和敌人预制体
-    public List<GameObject> friendPrababs;
-    public List<GameObject> enemyPrababs;
+    int i; //索引
+    //使用字典储存所有士兵预制体
+    private Dictionary<string, GameObject> Soldiers = new Dictionary<string, GameObject>();
+    //判断游戏是否结束
+    public bool gameOver;
     void Awake()
     {
-        SoldierCharacter[] friendPrababsArray= Resources.LoadAll<SoldierCharacter>("Prafabs/Soldiers");            
-        foreach (var item in friendPrababsArray)
+        SaveSoldierPrefabs();
+    }
+    void SaveSoldierPrefabs() //用字典储存所有士兵预制体,使用名字做键
+    {
+        SoldierCharacter[] soldierPrefabs = Resources.LoadAll<SoldierCharacter>("Prafabs/Soldiers");
+        foreach (var item in soldierPrefabs)
         {
-            friendPrababs.Add(item.gameObject);
+            Soldiers.Add(item.name, item.gameObject);
         }
     }
-    public GameObject CreateCharacter(Vector3 pos,string tag) //生成角色
+    public GameObject GetSoldierByName(string cardName) //根据卡牌名找到士兵
     {
-        friendPrababs[0].tag = tag;
-        GameObject character= Instantiate(friendPrababs[0],pos,Quaternion.identity);
-        return character;
+        if (!gameOver) //游戏没有结束时才能创建
+            return Soldiers[cardName];
+        return null;
     }
-    public void JudgementOfVictoryOrDefeat() //胜负判断(谁的主城没了,谁就GG)
+    void Update()
     {
-
+        if (!gameOver) //如果游戏未结束,判断胜负
+            JudgementOfVictoryOrDefeat();
+    }
+    public void JudgementOfVictoryOrDefeat() //胜负判断
+    {
+        //其中一方主城挂了, 游戏结束, 另一方获胜
+        if (!mainCitys[i]) //发现
+        {
+            gameOver = true;
+            print(mainCitys[Mathf.Abs(i - 1)].tag + "赢了");
+        }
+        i = Mathf.Abs(i - 1);
     }
 }

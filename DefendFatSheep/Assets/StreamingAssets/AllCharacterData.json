@@ -3,7 +3,7 @@
  "ID":1001, 					
  "CharacterName":"防御塔", 	
  "Hp":10000,					
- "Ad":200, 		//攻击力
+ "Ad":1, 		//攻击力
  "Ap":0,			//法强
  "Adr":150,	//物理抗性
  "Apr":120,		//魔法抗性
@@ -14,7 +14,7 @@
  "App":0,		//法术穿透
  "MoveSpeed":0,				
  "RotateSpeed":0,			
- "AttackRange":25,			//攻击范围
+ "AttackRange":30,			//攻击范围
  "ViewRange":0,             //视野范围
  "CardName":"防御塔"              //卡牌名称
  },
@@ -28,10 +28,10 @@
  "Apr":150,		//魔法抗性
  "AttackSpeed":1.0,			
  "Cc":0.1,		//暴击率
- "Cm":1.2,	//暴击倍数
+ "Cm":5,	//暴击倍数
  "Adp":10, 	//物理穿透
  "App":0,		//法术穿透
- "MoveSpeed":10,				
+ "MoveSpeed":15,				
  "RotateSpeed":180,			
  "AttackRange":2,			//攻击范围
  "ViewRange":50,            //视野范围
@@ -41,7 +41,7 @@
  "ID":2002, 				//*****战士*****	
  "CharacterName":"剑圣", 	
  "Hp":800,					
- "Ad":300, 		//攻击力
+ "Ad":200, 		//攻击力
  "Ap":0,			//法强
  "Adr":50,	//物理抗性
  "Apr":100,		//魔法抗性
@@ -50,17 +50,17 @@
  "Cm":2,	//暴击倍数
  "Adp":40, 	//物理穿透
  "App":0,		//法术穿透
- "MoveSpeed":40,				
+ "MoveSpeed":20,				
  "RotateSpeed":240,			
- "AttackRange":10,			//攻击范围
+ "AttackRange":5,			//攻击范围
  "ViewRange":50,            //视野范围
- "CardName":"JianSheng"     //卡牌名称
+ "CardName":"JianSheng"     //卡牌预制体名称
  },
   {
  "ID":2003, 				//*****ADC*****	
  "CharacterName":"女警", 	
  "Hp":300,					
- "Ad":280, 		//攻击力
+ "Ad":180, 		//攻击力
  "Ap":0,			//法强
  "Adr":30,	//物理抗性
  "Apr":20,		//魔法抗性
@@ -80,7 +80,7 @@
  "CharacterName":"寒冰", 	
  "Hp":500,					
  "Ad":0, 		    //攻击力
- "Ap":150,		    //法强
+ "Ap":1,		    //法强
  "Adr":40,	//物理抗性
  "Apr":60,		//魔法抗性
  "AttackSpeed":1.2,			
@@ -90,7 +90,7 @@
  "App":20,		//法术穿透
  "MoveSpeed":30,				
  "RotateSpeed":200,			
- "AttackRange":25,			//攻击范围
+ "AttackRange":20,			//攻击范围
  "ViewRange":50,            //视野范围
  "CardName":"HanBing"       //卡牌名称
  }
