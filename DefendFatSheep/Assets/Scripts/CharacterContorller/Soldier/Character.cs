@@ -22,6 +22,8 @@ public abstract class Character : MonoBehaviour
     public float rotateSpeed; //转身速度
     public float attackRange; //攻击范围
     public float viewRange; //视野范围
+    public float waterConsume; //圣水消耗
+    public float spiritConsume; //精魄消耗
 
     //运行中获取
     public Transform EnemyMainCity; //敌方主城
@@ -41,7 +43,7 @@ public abstract class Character : MonoBehaviour
     {
         dataManage = FindObjectOfType<DataManage>();
         JsonData data = dataManage.allDate;
-        data = dataManage.GetCharacterData(id);
+        data = dataManage.GetDataByName(name);//根据名字获取数据
 
         CharacterName = data["CharacterName"].ToString();
         hp = float.Parse(data["Hp"].ToString()); //生命值
@@ -58,6 +60,8 @@ public abstract class Character : MonoBehaviour
         rotateSpeed = float.Parse(data["RotateSpeed"].ToString());//转身速度
         attackRange = float.Parse(data["AttackRange"].ToString()); //攻击范围
         viewRange = float.Parse(data["ViewRange"].ToString()); //视野范围
+        waterConsume = float.Parse(data["WaterConsume"].ToString()); //圣水消耗
+        spiritConsume = float.Parse(data["SpiritConsume"].ToString()); //精魄消耗
     }
     //根据自身标签判定获取敌人主城
     public void GetMainCity()

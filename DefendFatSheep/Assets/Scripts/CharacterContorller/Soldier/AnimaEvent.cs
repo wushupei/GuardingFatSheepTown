@@ -6,7 +6,7 @@ public class AnimaEvent : MonoBehaviour
     Transform muzzle; //枪口(远程士兵用)
     GameObject bullet; //子弹(远程士兵用)
     public float ad, adp, cc, cm, ap, app; //物理攻击,物理穿透,暴击率,暴击倍数,法强,法术穿透
-    void OnEnable()
+    void Start()
     {
         //获取枪口,加载子弹预制体
         muzzle = FindChildByName(transform, "Muzzle");

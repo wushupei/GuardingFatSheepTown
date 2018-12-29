@@ -3,7 +3,7 @@
  "ID":1001, 					
  "CharacterName":"防御塔", 	
  "Hp":10000,					
- "Ad":1, 		//攻击力
+ "Ad":250, 		//攻击力
  "Ap":0,			//法强
  "Adr":150,	//物理抗性
  "Apr":120,		//魔法抗性
@@ -16,7 +16,9 @@
  "RotateSpeed":0,			
  "AttackRange":30,			//攻击范围
  "ViewRange":0,             //视野范围
- "CardName":"防御塔"              //卡牌名称
+ "PrefabName":"Tower",          //预制体名称
+ "WaterConsume":0,             //圣水消耗
+ "SpiritConsume":0            //精魄消耗
  },
  {
  "ID":2001,					//*****坦克*****
@@ -35,7 +37,9 @@
  "RotateSpeed":180,			
  "AttackRange":2,			//攻击范围
  "ViewRange":50,            //视野范围
- "CardName":"ShuGuang"      //卡牌名称
+ "PrefabName":"ShuGuang",      //预制体名称
+ "WaterConsume":3,             //圣水消耗
+ "SpiritConsume":0            //精魄消耗
  },
   {
  "ID":2002, 				//*****战士*****	
@@ -54,7 +58,9 @@
  "RotateSpeed":240,			
  "AttackRange":5,			//攻击范围
  "ViewRange":50,            //视野范围
- "CardName":"JianSheng"     //卡牌预制体名称
+ "PrefabName":"JianSheng",     //预制体名称
+ "WaterConsume":2,             //圣水消耗
+ "SpiritConsume":0            //精魄消耗
  },
   {
  "ID":2003, 				//*****ADC*****	
@@ -73,14 +79,16 @@
  "RotateSpeed":240,			
  "AttackRange":30,			//攻击范围
  "ViewRange":50,            //视野范围
- "CardName":"NvJing"        //卡牌名称
+ "PrefabName":"NvJing",        //预制体名称
+ "WaterConsume":3,             //圣水消耗
+ "SpiritConsume":0            //精魄消耗
  },
  {
  "ID":2004, 				//*****法师*****	
  "CharacterName":"寒冰", 	
  "Hp":500,					
  "Ad":0, 		    //攻击力
- "Ap":1,		    //法强
+ "Ap":150,		    //法强
  "Adr":40,	//物理抗性
  "Apr":60,		//魔法抗性
  "AttackSpeed":1.2,			
@@ -92,6 +100,8 @@
  "RotateSpeed":200,			
  "AttackRange":20,			//攻击范围
  "ViewRange":50,            //视野范围
- "CardName":"HanBing"       //卡牌名称
+ "PrefabName":"HanBing",       //预制体名称
+ "WaterConsume":2,             //圣水消耗
+ "SpiritConsume":0            //精魄消耗
  }
 ]

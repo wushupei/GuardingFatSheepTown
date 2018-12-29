@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//挂摄像机上
 public class CameraMove : MonoBehaviour
 {
     public float moveSpeed, viewSpeed; //镜头移动速度和缩放速度

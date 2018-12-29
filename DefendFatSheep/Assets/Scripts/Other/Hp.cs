@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-
+//挂血条上
 public class Hp : MonoBehaviour
 {
     Transform mainCamera;

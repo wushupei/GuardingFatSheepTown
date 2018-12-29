@@ -8,8 +8,8 @@ public class CharacterManage : MonoBehaviour
     //存放双方主城
     public Transform[] mainCitys;
     int i; //索引
-    //使用字典储存所有士兵预制体
-    private Dictionary<string, GameObject> Soldiers = new Dictionary<string, GameObject>();
+    //使用字典储存所有士兵
+    Dictionary<string, GameObject> Soldiers = new Dictionary<string, GameObject>();
     //判断游戏是否结束
     public bool gameOver;
     void Awake()
@@ -18,10 +18,10 @@ public class CharacterManage : MonoBehaviour
     }
     void SaveSoldierPrefabs() //用字典储存所有士兵预制体,使用名字做键
     {
-        SoldierCharacter[] soldierPrefabs = Resources.LoadAll<SoldierCharacter>("Prafabs/Soldiers");
+        GameObject[] soldierPrefabs = Resources.LoadAll<GameObject>("Prafabs/Soldiers");
         foreach (var item in soldierPrefabs)
         {
-            Soldiers.Add(item.name, item.gameObject);
+            Soldiers.Add(item.name, item);
         }
     }
     public GameObject GetSoldierByName(string cardName) //根据卡牌名找到士兵

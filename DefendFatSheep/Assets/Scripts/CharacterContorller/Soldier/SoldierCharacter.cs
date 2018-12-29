@@ -13,7 +13,7 @@ public class SoldierCharacter : Character
     AnimatorStateInfo animaState;
     float radius; //攻击目标的半径
     public AudioClip attackSound, deathSound; //攻击和死亡音效
-    public void OnEnable()
+    void OnEnable()
     {
         GetMainCity(); //判断标签
         audioSource = GetComponent<AudioSource>();
@@ -98,32 +98,35 @@ public class SoldierCharacter : Character
     }
     public void FindWay() //寻路
     {
-        //如果与攻击目标距离大于攻击范围,则走向它
-        Vector3 v = attackTarget.position; //攻击目标位置
-        radius = attackTarget.GetComponent<CapsuleCollider>().bounds.size.x; //攻击目标半径
-        if (Vector3.Distance(transform.position, new Vector3(v.x, transform.position.y, v.z)) > attackRange + radius)
+        if (attackTarget)
         {
-            //如果寻路器被禁用,则启用
-            if (agent.enabled == false)
+            //如果与攻击目标距离大于攻击范围,则走向它
+            Vector3 v = attackTarget.position; //攻击目标位置
+            radius = attackTarget.GetComponent<CapsuleCollider>().bounds.size.x; //攻击目标半径
+            if (Vector3.Distance(transform.position, new Vector3(v.x, transform.position.y, v.z)) > attackRange + radius)
             {
-                obstacle.enabled = false;
-                agent.enabled = true;
+                //如果寻路器被禁用,则启用
+                if (agent.enabled == false)
+                {
+                    obstacle.enabled = false;
+                    agent.enabled = true;
+                }
+                else
+                    agent.SetDestination(attackTarget.position);
+                //切换为跑步动画
+                if (!animaState.IsName("Run"))
+                    anima.SetTrigger("Run");
             }
-            else
-                agent.SetDestination(attackTarget.position);
-            //切换为跑步动画
-            if (!animaState.IsName("Run"))
-                anima.SetTrigger("Run");
-        }
-        else //到达攻击范围则停下面向它攻击
-        {
-            //禁用寻路,打开动态障碍
-            if (agent.enabled == true)
+            else //到达攻击范围则停下面向它攻击
             {
-                agent.enabled = false;
-                obstacle.enabled = true;
+                //禁用寻路,打开动态障碍
+                if (agent.enabled == true)
+                {
+                    agent.enabled = false;
+                    obstacle.enabled = true;
+                }
+                Attack();
             }
-            Attack();
         }
     }
     public override void Death() //死亡方法

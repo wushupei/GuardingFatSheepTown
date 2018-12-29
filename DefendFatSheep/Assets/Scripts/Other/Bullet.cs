@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 using UnityEngine;
 
-
+//挂子弹预制体上
 public class Bullet : MonoBehaviour
 {
     public float flySpeed; //子弹飞行速度

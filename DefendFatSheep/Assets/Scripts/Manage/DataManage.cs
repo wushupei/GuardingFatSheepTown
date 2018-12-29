@@ -13,20 +13,11 @@ public class DataManage : MonoBehaviour
         if (allDate == null)
             print("空");
     }
-    public JsonData GetCharacterData(int id) //获取角色数据
+    public JsonData GetDataByName(string name) //根据名字获取数据
     {
         for (int i = 0; i < allDate.Count; i++)
         {
-            if ((int)allDate[i]["ID"] == id) //ID对上就将数据给它
-                return allDate[i];
-        }
-        return null;
-    }
-    public JsonData GetCardData(string name) //获取卡牌数据
-    {
-        for (int i = 0; i < allDate.Count; i++)
-        {
-            if (name.Contains(allDate[i]["CardName"].ToString())) //名字对的上,返回该数据
+            if (name.Contains(allDate[i]["PrefabName"].ToString())) //名字对的上,返回该数据
                 return allDate[i];
         }
         return null;

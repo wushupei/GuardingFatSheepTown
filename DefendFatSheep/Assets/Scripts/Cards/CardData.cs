@@ -15,7 +15,7 @@ public class CardData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         //初始化时根据自身名字从数据管理类中领取自己的数据
         dataManage = FindObjectOfType<DataManage>();
-        selfData = dataManage.GetCardData(name);
+        selfData = dataManage.GetDataByName(name);
         //先找到信息面板的父物体,再获取隐藏的信息栏
         dataPanel = GameObject.Find("DataPanel").transform.Find("CardData");
         pc = FindObjectOfType<PlayerContorller>();
@@ -39,7 +39,8 @@ public class CardData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerDown(PointerEventData eventData) //鼠标点击时执行一次
     {
         //根据卡牌信息主角获取要生成的士兵信息
-        pc.cardName = selfData["CardName"].ToString();
+        pc.cardName = selfData["PrefabName"].ToString();
+        pc.waterConsume =float.Parse( selfData["WaterConsume"].ToString());
     }
     void ShowSelfData() //在面板显示卡牌信息
     {
@@ -48,7 +49,6 @@ public class CardData : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         {
             //根据当前信息项的名字作为键去Json中获取值
             Transform a = dataPanel.GetChild(i); 
-            string data = selfData[a.name].ToString();
             //拿到Text组件显示的内容
             Text t = a.GetComponent<Text>();
             string s = t.text.ToString();
